@@ -16,19 +16,21 @@
 body {
   background-color: var(--bg);
   font-family: "Outfit", sans-serif;
-  display: flex;
-  align-items: center;
 }
 
+/* header */
 #main-header {
   background-color: var(--blanco);
   display: flex;
+  top: 0;
   align-items: center;
   height: 4.5rem;
   width: 100%;
   border-bottom: 1px solid rgb(190, 190, 190);
   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
   font-size: 1.2rem;
+  position: fixed;
+  z-index: 9;
 }
 
 #main-headre picture {
@@ -62,4 +64,91 @@ body {
   padding-right: 1rem;
   flex: 1;
   gap: 1rem;
+}
+
+/* portada */
+
+main {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.5rem;
+  padding: 10rem;
+  gap: 3rem;
+  width: 100dvw;
+  height: 20rem;
+}
+
+.portada {
+  display: flex;
+  align-items: center;
+  height: 15rem;
+  max-width: 320px;
+  min-width: 290px;
+  flex-direction: column;
+}
+
+.portada h1 {
+  font-size: 2.5rem;
+}
+.portada h1:nth-child(2) {
+  padding-bottom: 1.5rem;
+}
+
+.portada nav {
+  justify-content: center;
+  display: flex;
+  width: 500px;
+}
+
+.portada a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem 0;
+  width: 10rem;
+  height: 2rem;
+  margin: 2rem 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid var(--negro);
+  color: var(--blanco);
+  font-weight: 600;
+  background-color: var(--negro);
+}
+
+.portada a:nth-child(2) {
+  border: 2px solid var(--negro);
+  background-color: var(--blanco);
+  color: var(--negro);
+}
+
+main picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main picture img {
+  width: 95%;
+  max-width: 20rem;
+  min-width: 250px;
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem;
+}
+
+@media (max-width: 730px) {
+  main {
+    flex-direction: column;
+    height: 30rem;
+    padding: 0;
+    margin-top: 10rem;
+  }
+  .portada {
+    flex-direction: column;
+    width: 20rem;
+    text-align: center;
+  }
 }
