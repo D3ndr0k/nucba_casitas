@@ -175,5 +175,6 @@ main picture img {
   }
   .desc p {
     width: 80dvw;
+    font-size: 1rem;
   }
 }
