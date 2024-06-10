@@ -73,7 +73,7 @@ main {
   position: relative;
   align-items: center;
   justify-content: center;
-  margin-top: 4.5rem;
+  margin-top: 7rem;
   padding: 10rem;
   gap: 3rem;
   width: 100dvw;
@@ -121,7 +121,7 @@ main {
 
 .portada a:nth-child(2) {
   border: 2px solid var(--negro);
-  background-color: var(--blanco);
+  background-color: var(--bg);
   color: var(--negro);
 }
 
@@ -139,16 +139,41 @@ main picture img {
   border-radius: 1rem;
 }
 
-@media (max-width: 730px) {
+@media (max-width: 1080px) {
   main {
     flex-direction: column;
-    height: 30rem;
+    height: 20rem;
     padding: 0;
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
   .portada {
     flex-direction: column;
     width: 20rem;
     text-align: center;
+  }
+  main picture img {
+    display: none;
+  }
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100dvw;
+  margin-top: 3rem;
+}
+
+.desc p {
+  width: 720px;
+}
+
+@media (max-width: 1080px) {
+  .desc {
+    margin-top: 0;
+  }
+  .desc p {
+    width: 80dvw;
   }
 }
